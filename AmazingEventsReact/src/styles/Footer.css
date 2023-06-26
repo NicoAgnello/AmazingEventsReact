@@ -1,0 +1,18 @@
+
+.pie-pagina {
+  padding: 0 2rem 0 2rem;
+  background-color: rgb(92, 92, 92);
+  border-top: 4px double rgb(255, 255, 255);
+}
+
+.pie-pagina p {
+  font-weight: 700;
+  margin: 0;
+  color: #ffffff;
+}
+
+.social {
+  width: 3rem;
+  border: 8px solid black;
+  border-radius: 1rem;
+}

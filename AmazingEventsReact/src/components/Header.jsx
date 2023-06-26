@@ -17,7 +17,7 @@ function Header (){
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0 align-items-center gap-3">
                         <li className="nav-item ">
-                            <a className="nav-link enlace" aria-current="page" href="#">Home</a>
+                            <a className="nav-link enlace " aria-current="page" href="#">Home</a>
                         </li>
                         <li className="nav-item ">
                             <a className="enlace nav-link " href="#">Upcoming Events</a>

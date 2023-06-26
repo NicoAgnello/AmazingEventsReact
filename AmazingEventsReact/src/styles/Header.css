@@ -1,26 +1,32 @@
-.amazing-logo{
-    width: 20rem;
-    padding: 2rem;
+.amazing-logo {
+  width: 20rem;
+  padding: 2rem;
 }
 
 .enlace {
-    padding: .7rem;
-    color: white !important;
-    border-radius: 2rem;
+  padding: .7rem 1rem !important;
+  color: white !important;
+  border-radius: 2rem;
 }
 
 .enlace:hover {
-    background-color: #e0046c;
-    font-weight: 600;
+  background-color: #e0046c;
+  font-weight: 600;
 }
 
-@media ( width < 768px){
-    .amazing-logo{
-        width: 85vw;
-        align-self: center;
-    }
+@media (width < 991px) {
+  .amazing-logo {
+    width: 80vw;
+    align-self: center;
+  }
 
-    header {
-        flex-direction: column;
-    }
+  header {
+    flex-direction: column;
+  }
+
+  .enlace{
+    margin-top: 1rem;
 }
+}
+
+
