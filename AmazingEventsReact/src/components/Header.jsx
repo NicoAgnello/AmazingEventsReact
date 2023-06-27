@@ -1,6 +1,7 @@
 
 import '../styles/Header.css'
 import AmazingLogo from '../img/LogoAmazingEvents.png'
+import { Link } from 'react-router-dom';
 
 function Header (){
     return (
@@ -17,19 +18,19 @@ function Header (){
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0 align-items-center gap-3">
                         <li className="nav-item ">
-                            <a className="nav-link enlace " aria-current="page" href="#">Home</a>
+                            <Link className="nav-link enlace " aria-current="page" to="/">Home</Link>
                         </li>
                         <li className="nav-item ">
-                            <a className="enlace nav-link " href="#">Upcoming Events</a>
+                            <Link className="enlace nav-link " to="#">Upcoming Events</Link>
                         </li>
                         <li className="nav-item ">
-                            <a className="nav-link enlace" href="#">Past Events</a>
+                            <Link className="nav-link enlace" to="#">Past Events</Link>
                         </li>
                         <li className="nav-item ">
-                            <a className="nav-link enlace" href="#">Contact</a>
+                            <Link className="nav-link enlace" to="/contact">Contact</Link>
                         </li>
                         <li className="nav-item ">
-                            <a className="nav-link enlace" href="#">Stats</a>
+                            <Link className="nav-link enlace" to="#">Stats</Link>
                         </li>
                     </ul>
                 </div>

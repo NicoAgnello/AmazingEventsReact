@@ -1,6 +1,7 @@
-import "../styles/Body.css";
+import "../styles/Home.css";
+import { Link } from 'react-router-dom';
 
-function Body({ data }) {
+function Home({ data }) {
   return (
     <div className="body">
       <h1 className="col-12 text-center pt-3">HOME</h1>
@@ -17,7 +18,7 @@ function Body({ data }) {
                     <p className="card-text text-center">{event.description}</p>
                     <div className=" d-flex align-items-center justify-content-evenly">
                       <h6>Price: <span>{event.price}</span></h6>
-                      <a className="see-more">See more</a>
+                      <Link className="see-more" to={`/events/${event._id}`}>See more</Link>
                     </div>
                   </div>
                 </div>
@@ -30,4 +31,4 @@ function Body({ data }) {
   );
 }
 
-export default Body;
+export default Home;

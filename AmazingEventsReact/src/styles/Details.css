@@ -1,0 +1,45 @@
+.main-details {
+  min-height: 90vh;
+  background-color: #6c757d;
+}
+
+.image-event{
+  border-radius: 2.5rem;
+}
+
+.box-detalles {
+  background-color: #9b054b !important; 
+}
+
+.cuerpo-details h5 {
+  font-weight: 900;
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 1.6px rgb(5, 5, 5);
+}
+
+.cuerpo-details h6 {
+  font-size: 1.4rem;
+  color: rgb(219, 219, 219);
+}
+
+.cuerpo-details p,
+.lista-details,
+.price-date-details h6 {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke: 1px rgb(5, 5, 5);
+}
+
+.lista-details {
+  font-weight: 700;
+}
+
+.price-date-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+

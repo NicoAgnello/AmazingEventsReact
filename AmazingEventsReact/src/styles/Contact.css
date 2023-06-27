@@ -1,0 +1,19 @@
+section{
+  min-height: 80vh;
+}
+
+.formulario1 {
+  border: 2px solid rgb(87, 85, 85);
+  width: 60%;
+  background-color: rgb(218, 215, 215);
+}
+
+.input-mail-name {
+  width: 20rem !important;
+}
+
+.input-text-area {
+  width: 22rem !important;
+  height: 250px !important;
+}
+
