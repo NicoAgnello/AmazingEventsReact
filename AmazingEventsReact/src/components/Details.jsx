@@ -2,24 +2,22 @@ import { useParams } from "react-router-dom";
 import "../styles/Details.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import useGetEvents from "../hooks/useGetEvents";
 
 function Details() {
   const { id } = useParams();
 
-  const [event, setEvent] = useState([]);
+  const { data, isLoading } = useGetEvents();
 
-  useEffect(() => {
-    axios
-      .get("https://mindhub-xj03.onrender.com/api/amazing")
-      .then((res) => setEvent(res.data.events.find((event) => event._id == id)))
-      .catch((err) => console.log(err));
-  });
+  if (isLoading) return <span>Loading...</span>;
+  if (data.length === 0) return <span>Sin datos</span>;
 
+  const event = data.find((event) => event._id === Number(id));
   return (
     <main className="d-flex flex-column justify-content-start align-items-center main-details">
-      <h1 className="col-12">Details</h1>
+      <h1 className="col-12 text-center text-body-emphasis">Details</h1>
       <div className="row d-flex flex-row justify-content-evenly aling-items-center m-5 gap-2 ">
-        <img src={event.image} alt={event.name} className="col-11 col-xl-6 d-flex justify-content-center image-event" />
+        <img src={event.image} alt={event.name} className="col-11 col-xl-5 d-flex justify-content-center image-event" />
         <div className="card col-11 col-xl-6 box-detalles">
           <div className="card-body cuerpo-details">
             <h5 className="text-center">{event.name}</h5>
@@ -27,13 +25,14 @@ function Details() {
             <ul className="d-flex flex-column gap-3 text-center p-0 lista-details">
               <li className="list-group-item">Catergory: {event.category}</li>
               <li className="list-group-item">Place: {event.place}</li>
-              <li className="list-group-item">Capacity: {event.capacity}</li>
-              <li className="list-group-item"></li>
-              <li className="list-group-item"></li>
+              <li className="list-group-item">Capacity: {event.capacity.toLocaleString("es-AR")}</li>
+              <li className="list-group-item">
+                {event.assistance ? `Assistance: ${event.assistance.toLocaleString("es-AR")}` : `Estimate: ${event.estimate}`}
+              </li>
             </ul>
             <div className="price-date-details p-2">
               <h6 className="card-title text-center">{event.date}</h6>
-              <h6 className="card-title text-center">Price: ${event.pice}</h6>
+              <h6 className="card-title text-center">Price: ${event.price.toLocaleString("es-AR")}</h6>
             </div>
           </div>
         </div>
