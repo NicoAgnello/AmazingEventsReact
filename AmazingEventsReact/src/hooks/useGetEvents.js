@@ -6,6 +6,8 @@ const useGetEvents = () => {
 
   const [data, setData] = useState([]);
 
+  const [currentDate, setCurrentDate] = useState([])
+
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -17,8 +19,9 @@ const useGetEvents = () => {
       try {
         // Con destructuracion
         setIsLoading(true)
-        const {data: { events }} = await axios.get(URL);
+        const {data: { events, currentDate }} = await axios.get(URL);
         setData(events);
+        setCurrentDate(currentDate)
         // 
         // Sin Destructuracion
         // const res = await axios.get(URL);
@@ -32,7 +35,7 @@ const useGetEvents = () => {
     }
     getEvents()
   }, []);
-  return {data, isLoading};
+  return {data, currentDate, isLoading};
 };
 
 export default useGetEvents;

@@ -21,10 +21,10 @@ function Header (){
                             <Link className="nav-link enlace " aria-current="page" to="/">Home</Link>
                         </li>
                         <li className="nav-item ">
-                            <Link className="enlace nav-link " to="#">Upcoming Events</Link>
+                            <Link className="enlace nav-link " to="/events/upcoming">Upcoming Events</Link>
                         </li>
                         <li className="nav-item ">
-                            <Link className="nav-link enlace" to="#">Past Events</Link>
+                            <Link className="nav-link enlace" to="/events/past">Past Events</Link>
                         </li>
                         <li className="nav-item ">
                             <Link className="nav-link enlace" to="/contact">Contact</Link>
